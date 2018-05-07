@@ -1,0 +1,10 @@
+mysql-mystore:
+  image: andrepapaz/mysql-mystore
+  ports: 
+    - "3306"
+spring-app:
+  image: andrepapaz/springboot-mystore
+  ports: 
+    - "8080:8080"
+  links:
+    - "mysql-mystore"

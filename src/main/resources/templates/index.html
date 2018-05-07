@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="fragments/header :: header"></head>
+
+<body>
+
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+<main role="main"> <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-2">MyStore</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>name</h2>
+            </div>
+        </div>
+
+
+        <div th:each="prod : ${produtos}">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>
+                        <a th:href="@{'/details/'+${prod.pk}}" th:text="${prod.pVenue}">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <hr/>
+        </div>
+
+    </div>
+    <!-- /container --> </main>
+<br/>
+
+<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>

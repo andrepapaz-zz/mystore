@@ -1,0 +1,16 @@
+<div th:fragment="footer" xmlns:th="http://www.w3.org/1999/xhtml">
+    <footer class="container">
+        <p>
+            <img th:src="@{/logo.jpg}" class="rounded" alt="Keyrus Digital"
+                 width="200px"/> page generated in <span th:text="${dateFooter}"></span>
+            <br/>
+
+
+        </p>
+    </footer>
+
+    <script th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.0.0-beta.3/js/bootstrap.min.js}"></script>
+
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"></head>
+<body>
+
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+<main role="main">
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-2">MyStore - Product Detail</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>id</h2>
+            </div>
+            <div class="col-md-4">
+                <h2>name</h2>
+            </div>
+            <div class="col-md-4">
+                <h2>date</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p th:text="${produto.pBaseproduct}">
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p th:text="${produto.pVenue}">
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p th:text="${#dates.format(produto.pDate, 'dd/MM/yyyy')}">
+                </p>
+            </div>
+        </div>
+        <hr />
+
+        <a class="btn btn-primary btn-lg" href="javascript:history.go(-1)"
+           role="button"> Back </a>
+    </div>
+    <!-- /container --> </main>
+<br/>
+
+<div th:replace="fragments/footer :: footer" />
+
+</body>
+</html>
